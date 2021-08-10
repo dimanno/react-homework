@@ -2,7 +2,7 @@ import './User.css';
 import {Address} from "../Address/Address";
 
 export default function User(props) {
-    const {id, uName, username, email, phone, website, address} = props.user;
+    const {item:{id, uName, username, email, phone, website, address}} = props;
     return (
         <div className="UserBox">
             <h2>{id} - Name: {uName} {username}</h2>
