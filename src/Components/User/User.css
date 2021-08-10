@@ -1,0 +1,19 @@
+.UserBox {
+    width: 25%;
+    border: red 2px solid;
+    padding: 10px;
+    border-radius: 20%;
+    box-sizing: border-box;
+}
+
+ul {
+    font-size: 15px;
+    color: red;
+}
+
+li {
+    color: black;
+}
+h2 {
+    text-align: center;
+}
