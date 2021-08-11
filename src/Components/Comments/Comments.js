@@ -5,9 +5,10 @@ import {Comment} from "../Comment/Comment";
 
 export function Comments() {
    let [comments, setComments] = useState([])
+
     useEffect(() =>{
-        getComments().then(({data}) => setComments([...data]))
-    }, [comments.id])
+        // getComments().then(value => setComments([...value.data]))
+    }, [])
 
     return (
         <div>

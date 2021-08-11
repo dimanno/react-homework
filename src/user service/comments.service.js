@@ -6,7 +6,7 @@ let config = {
 const axiosInstance = axios.create(config)
 
 const getComments = ()=> {
-    return axiosInstance.get('')
+    return axiosInstance()
 }
 
 export {getComments}
