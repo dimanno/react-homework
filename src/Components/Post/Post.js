@@ -1,9 +1,9 @@
 
-export function Post({item}) {
+export function Post({item:{id,title,body}}) {
     return (
         <div>
-            <h3>{item.id} - Title: {item.title} </h3>
-            <p>{item.body}</p>
+            <h3>{id} - Title: {title} </h3>
+            <p>{body}</p>
         </div>
     );
 }
