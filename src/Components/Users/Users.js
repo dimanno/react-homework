@@ -2,7 +2,6 @@ import {getUsers} from "../../Services/users.service";
 import {useEffect, useState} from "react";
 import {User} from "../User/User";
 
-
 function Users() {
   let [users, setUsers] = useState([]);
 

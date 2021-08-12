@@ -1,20 +1,10 @@
-// import {Post} from "../Post/Post";
-// import {useEffect, useState} from "react";
-// import {getPosts} from "../../Services/posts.service";
-//
-// export function Posts() {
-//     let [posts, setPosts] = useState([])
-//     useEffect(() => {
-//         getPosts().then(value => setPosts(value.data))
-//     }, [])
-//
-//     return (
-//         <div className={'posts'}>
-//
-//             {
-//                 posts.map(value => <Post item ={value} key={value.id}/> )
-//             }
-//
-//         </div>
-//     );
-// }
+import {Post} from "../Post/Post";
+export function Posts({userPosts}) {
+ return (
+        <div>
+            {
+                userPosts.map(value => <Post item ={value} key={value.id}/> )
+            }
+        </div>
+ );
+}

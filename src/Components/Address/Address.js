@@ -1,5 +1,5 @@
 
-export function Address({address:{city, street, suite, zipcode}}) {
+export function Address({item,item:{city, street, suite, zipcode}}) {
     return (
         <div className="address">
             <ul> Address
