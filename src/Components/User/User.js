@@ -1,8 +1,8 @@
 import {Address} from "../Address/Address";
-
+import './User.css'
 export function User({item:{id,name,username,email,phone, website, address}}) {
     return (
-        <div className="main">
+        <div className="userBox">
             <h3>{id} - Name: {name}, ({username})</h3>
             <ul> Contact
                 <li>Email - {email}</li>

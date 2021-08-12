@@ -5,9 +5,8 @@ let config = {
 }
 const axiosInstance = axios.create(config)
 
-const getComments = ()=> {
-    return axiosInstance()
-}
+const getComments = ()=> axiosInstance()
+
 
 export {getComments}
 

@@ -1,11 +1,28 @@
-.App {
-  text-align: center;
-}
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
+
+.main {
+  display: flex;
+}
+
+h2 {
+  text-align: center;
+  color: red;
+}
+
+h3 {
+  text-align: center;
+  color: green;
+}
+
+h4{
+  text-align: center;
+  color: green;
+}
+
 
 
 @media (prefers-reduced-motion: no-preference) {
