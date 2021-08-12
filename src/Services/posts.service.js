@@ -5,7 +5,7 @@ let config = {
 }
 let axiosInstance = axios.create(config);
 const getPosts = () => {
-    return  axiosInstance.get(`/${id}`);
+    return  axiosInstance.get(``);
 }
 
 export {getPosts}

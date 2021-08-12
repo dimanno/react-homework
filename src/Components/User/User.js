@@ -1,7 +1,7 @@
 import {Address} from "../Address/Address";
 import {Post} from "../Post/Post";
 
-function User({item:{id,name,username,email,phone,website,address}}) {
+function User({item:{id,name,username,email,phone,website,address,post}}) {
 
     return (
         <div className="userBox">
@@ -12,6 +12,7 @@ function User({item:{id,name,username,email,phone,website,address}}) {
                 <li>Website - {website}</li>
             </ul>
             <Address address = {address}/>
+            <Post post ={post}/>
 
         </div>
     );
