@@ -1,3 +1,4 @@
+import './User.css'
 import {Address} from "../Address/Address";
 import {Posts} from "../Posts/Posts";
 import {useEffect, useState} from "react";
@@ -12,14 +13,14 @@ function User({item, item:{id,address}}) {
 
     return (
         <div className="userBox">
-            <h3>{id} - Name: {item.name}, ({item.username})</h3>
+            <h2>{id} - Name: {item.name}, ({item.username})</h2>
             <ul>Contact
                 <li>Email - {item.email}</li>
                 <li>Phone - {item.phone}</li>
             </ul>
             <Address item={address}/>
+            <h3>Posts</h3>
             <Posts userPosts={posts}/>
-
         </div>
     );
 }

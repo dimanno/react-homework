@@ -1,0 +1,17 @@
+h2 {
+    text-align: center;
+    color: green;
+}
+
+.userBox {
+    border: silver solid 2px;
+    padding: 30px;
+}
+
+h3 {
+    color: red;
+    text-align: center;
+}
+h4 {
+    color: blue;
+}

@@ -1,6 +1,7 @@
 import {useEffect, useState} from "react";
 import {getCommentsOfPost} from "../../Services/users.service";
-import {Comments} from "../Comments";
+import {Comments} from "../Comments/Comments";
+import './Post.css'
 
 export function Post({item, item: {id, title, body}}) {
 
@@ -11,8 +12,10 @@ export function Post({item, item: {id, title, body}}) {
 
     return (
         <div className={'postBox'}>
-            <h3>{id} - Title: {title} </h3>
-            <p>{body}</p>
+            <div className={'content'}>
+                <h4>{id} - Title: {title} </h4>
+                <p>{body}</p>
+            </div>
             <Comments postComments={comments}/>
         </div>
     );

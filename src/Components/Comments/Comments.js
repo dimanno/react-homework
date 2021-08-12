@@ -1,8 +1,8 @@
-import {Comment} from "./Comment/Comment";
-
+import {Comment} from "../Comment/Comment";
+import './Commrnts.css'
 export function Comments({postComments}) {
     return (
-        <div>
+        <div className={'commentWrap'}>
             {
                 postComments.map(value => <Comment item ={value} key={value.id}/> )
             }

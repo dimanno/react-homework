@@ -1,0 +1,10 @@
+.commentBox {
+    box-sizing: border-box;
+    padding: 5px;
+    border: 1px black solid;
+    flex-wrap: wrap;
+    width: 20%;
+}
+h5 {
+    color: red;
+}
