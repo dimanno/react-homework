@@ -7,14 +7,14 @@ import {Post} from "../Post/Post";
 export function Users() {
     let [users, setUsers] =useState([])
     let [user, setUser] =useState(null)
-    let [posts] = useState({})
+    let [posts, setPosts] = useState([])
     useEffect(()=> {
         getUsers().then(value => setUsers([...value]))
     }, [])
 
     const showPosts =(u)=>{
         setUser(u)
-        getPostOfUser(u.id).then(value => <Post item={value}/>)
+            getPostOfUser(u.id).then(value => setPosts(value))
     }
 
     return (
@@ -26,9 +26,11 @@ export function Users() {
                         showPosts={showPosts}/>)
                 }
             </div>
-             <div className={'postsBox'}>
-                 {user && JSON.stringify(user)}
-                 <Post item={posts}/>
+            <div className={'postsBox'}>
+                {user && JSON.stringify(user)}
+                {
+                    posts.map(value => <Post item={value} key={value.id}/>)
+                }
             </div>
         </div>
     )
