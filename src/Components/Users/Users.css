@@ -1,0 +1,19 @@
+.wrapUsersBox {
+    display: flex;
+}
+.wrapUsersBox > div {
+    width: 50%;
+}
+.wrapUsersBox {
+    border: solid 2px green;
+    padding: 20px;
+    margin: 20px;
+    box-sizing: border-box;
+}
+
+.postsBox {
+    border: solid 2px green;
+    padding: 20px;
+    margin: 20px;
+    box-sizing: border-box;
+}
