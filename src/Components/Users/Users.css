@@ -16,4 +16,15 @@
     padding: 20px;
     margin: 20px;
     box-sizing: border-box;
+    background: silver;
+}
+h4 {
+    color: green;
+}
+
+ul {
+    color: red;
+}
+li {
+    color: black;
 }
