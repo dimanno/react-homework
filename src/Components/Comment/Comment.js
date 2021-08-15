@@ -1,15 +1,15 @@
 import './Comment.css'
 
 export function Comment({item, chosenComment}) {
-    const onclickDetalComment = () => {
-      chosenComment(item)
+    const onclickDetailsComment = () => {
+      chosenComment()
     }
     return (
         <div className="commentBox">
             <ul>
                 <li>{item.id} - {item.name}</li>
             </ul>
-            <button onClick={onclickDetalComment}>Details</button>
+            <button onClick={onclickDetailsComment}>Details</button>
         </div>
     );
 }
