@@ -27,7 +27,11 @@ export function Users() {
                 }
             </div>
             <div className={'postsBox'}>
-                {user && JSON.stringify(user)}
+                {user &&
+                <ul>Contacts
+                    <li>Email - {user.email}</li>
+                    <li>Phone - {user.phone}</li>
+                </ul>}
                 {
                     posts.map(value => <Post item={value} key={value.id}/>)
                 }
