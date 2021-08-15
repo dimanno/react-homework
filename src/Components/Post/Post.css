@@ -1,0 +1,8 @@
+
+.postBox {
+    margin: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+    border: green solid 2px;
+    background: silver;
+}

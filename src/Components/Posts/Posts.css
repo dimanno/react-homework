@@ -1,1 +1,22 @@
 
+.wrapPostsBox {
+    display: flex;
+}
+
+.wrapPostsBox > div {
+    width: 50%;
+}
+
+.postsBox {
+    margin: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+    border: green solid 2px;
+}
+.detalPostBox {
+    margin: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+    border: green solid 2px;
+}
+

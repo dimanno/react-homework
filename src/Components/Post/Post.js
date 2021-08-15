@@ -1,4 +1,5 @@
 import './Post.css'
+
 export function Post({item, chosenPost}) {
     const onclickDetailsPost = () => {
         chosenPost(item)
@@ -6,7 +7,6 @@ export function Post({item, chosenPost}) {
     return (
         <div className="postBox">
             <h4>{item.id} Title: {item.title}</h4>
-            <p>{item.body}</p>
             <button onClick={onclickDetailsPost}>Details</button>
         </div>
     );

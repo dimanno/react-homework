@@ -9,4 +9,9 @@ const getPost = (id) => {
         .then(value => value.json())
 }
 
-export {getPosts, getPost}
+function getCommentsOfPost(postId) {
+    fetch(url + '/comments?postId')
+        .then(value => value.json())
+}
+
+export {getPosts, getPost, getCommentsOfPost}
