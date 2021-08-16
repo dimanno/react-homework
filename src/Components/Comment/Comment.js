@@ -2,7 +2,7 @@ import './Comment.css'
 
 export function Comment({item, chosenComment}) {
     const onclickDetailsComment = () => {
-      chosenComment()
+        chosenComment(item)
     }
     return (
         <div className="commentBox">
