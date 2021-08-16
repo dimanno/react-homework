@@ -1,6 +1,7 @@
 import './App.css';
-import {Form} from "./Form/Form";
+// import {Form} from "./Form/Form";
 import {ControledForm} from "./Controled-form/Controled.form";
+
 
 function App() {
   return (
