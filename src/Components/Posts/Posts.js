@@ -35,7 +35,7 @@ export function Posts() {
                     comments.map(value => <Comment
                         item={value}
                         key={value.id}
-                        chosenComent={chosenComment}/>)
+                        chosenComment={chosenComment}/>)
                     }
                     {comment && <p>{comment.body}</p>}
                 </div>

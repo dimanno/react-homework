@@ -1,6 +1,7 @@
 import './Comment.css'
 
 export function Comment({item, chosenComment}) {
+    console.log(chosenComment);
     const onclickDetailsComment = () => {
         chosenComment(item)
     }
