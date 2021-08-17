@@ -1,0 +1,27 @@
+.controledFormBox {
+border: silver 3px solid;
+    margin: 20px;
+    padding: 20px;
+}
+.saveForm {
+    border: silver 3px solid;
+    margin: 20px 200px;
+    padding: 20px;
+    display: flex;
+    flex-flow: column;
+}
+
+input {
+    background: silver;
+    margin: 5px;
+    padding: 5px;
+}
+.buttonSave {
+    background: green;
+    color: white;
+    width: 100px;
+}
+
+h1{
+    text-align: center;
+}

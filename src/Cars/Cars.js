@@ -1,17 +1,28 @@
 import {useEffect, useState} from "react";
 import {getCars} from "../Services/car.service";
-
+import {Car} from "../Car/Car";
+import './Cars.css'
+import {EditForm} from "../edit-form/edit.form";
 
 export function Cars() {
-    let [cars, setCars] = useState([])
+    let [editCar, setEditCar] = useState(false)
+    let [cars, setCars] = useState([]);
+    let [myId, setMyId] = useState([]);
     useEffect(()=>{
-           getCars()
-    },[])
+           getCars().then(value => setCars([...value]))
+    },[]);
+
+    const chosen =(id) => setMyId(id)
+
+
     return (
-        <div className="casBox">
+        <div className={'wrap'}>
+        <div className="carsBox">
             {
-                cars.map(value => console.log(value))
+                cars.map(value => <Car item={value} key={value.id} chosen={chosen} editCar={editCar} setEditCar={setEditCar}/>)
             }
+        </div>
+            {editCar && <EditForm id={myId}/>}
         </div>
     );
 }

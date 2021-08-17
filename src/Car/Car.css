@@ -1,0 +1,18 @@
+.carBox {
+    border: solid 2px green;
+}
+.cardCar{
+    display: flex;
+}
+
+.cardCar>div {
+    width: 50%;
+}
+
+button {
+    display: block;
+    margin: 5px;
+    padding: 5px;
+    background: green;
+    color: white;
+}

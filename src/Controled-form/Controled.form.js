@@ -1,7 +1,8 @@
+import './Controled-form.css'
 import {useState} from "react";
 import {saveCar} from "../Services/car.service";
 import {Cars} from "../Cars/Cars";
-// import {Cars} from "../Cars/Cars";
+
 export function ControledForm() {
 
     let [model, setModel] = useState('');
@@ -31,12 +32,13 @@ export function ControledForm() {
         setYear(year)
     }
     return (
-        <div className="controledFormBox">
-            <form onSubmit={onSubmitForm}>
+        <div className={'controledFormBox'}>
+            <form onSubmit={onSubmitForm} className={'saveForm'}>
+                <h1>Add Car</h1>
                 <input type="text" name="model" value={model} placeholder='enter model' onInput={onInputCangeModel}/>
                 <input type="number" name={'price'} value={price} placeholder='enter price' onInput={onInputCangePrice}/>
-                <input type="number" name={'year'} value={year} placeholder='enter year'onInput={onInputCangeYear}/>
-                <input type="submit" value="Save"/>
+                <input type="number" name={'year'} value={year} placeholder='enter year' onInput={onInputCangeYear}/>
+                <input className={'buttonSave'} type="submit" value="Save"/>
             </form>
             <div>
                 <Cars/>

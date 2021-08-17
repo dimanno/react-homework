@@ -1,0 +1,20 @@
+.editFormBox {
+    border: green 3px solid;
+    margin-left: 20px;
+    padding: 50px;
+}
+.editForm {
+    border: silver 3px solid;
+    margin: 20px 70px;
+    padding: 20px;
+    display: flex;
+    flex-flow: column;
+}
+h2{
+    text-align: center;
+}
+.buttonEdit {
+    background: green;
+    color: white;
+    width: 100px;
+}
