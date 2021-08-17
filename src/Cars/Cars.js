@@ -5,10 +5,10 @@ import {getCars} from "../Services/car.service";
 export function Cars() {
     let [cars, setCars] = useState([])
     useEffect(()=>{
-
-    })
+           getCars()
+    },[])
     return (
-        <div className="carsBox">
+        <div className="casBox">
             {
                 cars.map(value => console.log(value))
             }

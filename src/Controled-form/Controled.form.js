@@ -1,11 +1,12 @@
 import {useState} from "react";
 import {saveCar} from "../Services/car.service";
+import {Cars} from "../Cars/Cars";
 // import {Cars} from "../Cars/Cars";
 export function ControledForm() {
 
-    let [model, setModel] = useState('model');
-    let [price, setPrice] = useState('price');
-    let [year, setYear] = useState('year');
+    let [model, setModel] = useState('');
+    let [price, setPrice] = useState('');
+    let [year, setYear] = useState('');
     let [car, setCar] = useState({model:'',price:'',year:''})
 
 
@@ -32,13 +33,13 @@ export function ControledForm() {
     return (
         <div className="controledFormBox">
             <form onSubmit={onSubmitForm}>
-                <input type="text" name="model" value={model} onInput={onInputCangeModel}/>
-                <input type="number" name={'price'} value={price} onInput={onInputCangePrice}/>
-                <input type="number" name={'year'} value={year} onInput={onInputCangeYear}/>
+                <input type="text" name="model" value={model} placeholder='enter model' onInput={onInputCangeModel}/>
+                <input type="number" name={'price'} value={price} placeholder='enter price' onInput={onInputCangePrice}/>
+                <input type="number" name={'year'} value={year} placeholder='enter year'onInput={onInputCangeYear}/>
                 <input type="submit" value="Save"/>
             </form>
             <div>
-                {/*<button onClick={}>ShowAllCars</button>*/}
+                <Cars/>
             </div>
         </div>
     );
