@@ -2,6 +2,23 @@
   text-align: center;
 }
 
+.menu {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.buttonMenu {
+  border: green 2px solid;
+  width: 100px;
+  margin-top: 30px;
+  border-radius: 20%;
+  background: silver;
+}
+
+h4 {
+  text-align: center;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
