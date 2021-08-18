@@ -6,13 +6,13 @@ import {User} from "../../User/User";
 export function Users() {
     let [users, setUsers] = useState([])
     useEffect(()=> {
-        getUsers().then(value => console.log([value]))
+        getUsers().then(({data}) => setUsers([...data]))
         },
         [])
     return (
         <div className="usersBox">
             {
-               users.map(value => console.log(value) )
+               users.map(value => <User item={value} key={value.id}/>)
             }
         </div>
     );

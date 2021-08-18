@@ -1,0 +1,9 @@
+.userBox {
+    border: green 2px solid;
+    padding: 20px;
+    margin-left: 200px;
+    margin-right: 200px;
+}
+h2 {
+    text-align: center;
+}
