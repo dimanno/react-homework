@@ -10,7 +10,7 @@ export function Cars() {
     let [myId, setMyId] = useState([]);
     useEffect(()=>{
            getCars().then(value => setCars([...value]))
-    },[]);
+    },[cars]);
 
     const chosen =(id) => setMyId(id)
 

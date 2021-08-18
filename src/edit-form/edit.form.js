@@ -3,7 +3,6 @@ import {editCar} from "../Services/car.service";
 import './edit.form.css'
 
 export function EditForm({id}) {
-    console.log(id);
     let [model, setModel] = useState('');
     let [price, setPrice] = useState('');
     let [year, setYear] = useState('');
