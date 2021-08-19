@@ -1,0 +1,10 @@
+.carBox {
+    border: green solid 2px;
+    margin-right: 200px;
+    margin-left: 200px;
+    text-align: center;
+    background: white;
+}
+li{
+    list-style: none;
+}
