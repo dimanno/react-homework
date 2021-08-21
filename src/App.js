@@ -16,7 +16,7 @@ function App() {
           <div className={'menuItem'}>
               <Link to={'/'}>Home</Link>
           </div>
-          <div>
+          <div className={'menuItem'}>
               <Link to={'/Posts'}>Posts</Link>
           </div>
       </div>

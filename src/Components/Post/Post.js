@@ -1,9 +1,9 @@
 import './Post.css'
 
-export function Post(item) {
+export function Post({item}) {
     return (
         <div className="postBox">
-            {item.title}
+            {item.id} - {item.title}
         </div>
     );
 }
