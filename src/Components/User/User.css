@@ -1,0 +1,12 @@
+.userBox {
+    border: solid silver 1px;
+    padding: 5px;
+    text-align: center;
+}
+button {
+    padding: 5px;
+    background: green;
+    color: white;
+    border-radius: 20px;
+    box-sizing: border-box;
+}

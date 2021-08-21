@@ -1,4 +1,4 @@
-
+import './User.css'
 import {
     Link,
     withRouter
@@ -10,10 +10,10 @@ function User({item, history}) {
         history.push(`/users/${item.id}`);
     };
     return (
-        <div>
+        <div className={'userBox'}>
             {/*{item.name} - <Link to={{pathname:`/users/${item.id}`,state : item}}> user details</Link>*/}
             {/*{item.name} - <Link to={`/users/${item.id}`}> user details api sub fetch</Link>*/}
-            {item.name} - <button onClick={navigateTo}>go to details</button>
+            {item.name} - <button onClick={navigateTo}>User details</button>
 
 
         </div>
