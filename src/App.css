@@ -7,6 +7,18 @@
   pointer-events: none;
 }
 
+
+.menuBox {
+  display: flex;
+  justify-content: space-evenly;
+  border: green 1px solid;
+  background: silver;
+}
+
+.itemMenuBox {
+  padding: 20px;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

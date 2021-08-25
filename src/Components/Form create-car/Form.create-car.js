@@ -1,7 +1,7 @@
 import {useState} from "react";
 import {saveCar} from "../../Services/service.cars";
 import {Cars} from "../Cars/Cars";
-
+import './form.create-car.css'
 function CreateCar() {
     let [formState, setFormState]=useState({model:'', price:'', year:''})
     let [checkCar, setCheckCar] = useState({})
@@ -21,12 +21,15 @@ function CreateCar() {
 
     return(
         <div className={'createCarBox'}>
-                <form onSubmit={onsubmit}>
+            <div className={'wrapFormBox'}>
+                <form onSubmit={onsubmit} className={'createFormBox'} >
+                    Add Car
                     <input type="text" name={"model"} value={formState.model} placeholder='model' onChange={onFormChange}/>
                     <input type="number" name={"price"} value={formState.price} placeholder='price' onChange={onFormChange}/>
                     <input type="number" name={"year"} value={formState.year} placeholder='year' onChange={onFormChange}/>
                     <button onClick={clickSaveCar}>Save</button>
                 </form>
+            </div>
             <div>
                 <Cars checkCar={checkCar}/>
             </div>

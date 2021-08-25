@@ -1,7 +1,7 @@
 import {useEffect, useState} from "react";
 import {deleteCarApi, getCars} from "../../Services/service.cars";
 import {Car} from "../Car/Car";
-
+import './cars.css'
 function Cars(checkCar) {
     let [cars, setCars] = useState([])
     useEffect( ()=>{

@@ -1,0 +1,15 @@
+.carBox {
+    border: silver 1px solid;
+    padding: 5px;
+    display: flex;
+    justify-content: space-around;
+}
+
+button {
+
+}
+
+h5  {
+    padding: 3px;
+    margin: 0;
+}

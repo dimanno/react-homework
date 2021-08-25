@@ -1,0 +1,29 @@
+.createFormBox {
+    display: flex;
+    flex-flow: column;
+    width: 400px;
+    border: green 1px solid;
+    text-align: center;
+    padding: 5px;
+    margin: 10px;
+}
+input {
+    margin: 10px;
+}
+.createCarBox {
+    text-align: center;
+    display: block;
+}
+
+button {
+    background: green;
+    color: white;
+    padding: 5px;
+    width: 100px;
+}
+
+.wrapFormBox {
+    margin-left: auto;
+    margin-right: auto;
+    width: 500px;
+}

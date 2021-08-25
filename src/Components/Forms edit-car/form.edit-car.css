@@ -1,0 +1,24 @@
+.wrap {
+    display: flex;
+}
+
+.selectBox {
+    margin: 30px;
+    padding:  30px;
+}
+
+.wrapForm {
+    display: flex;
+    flex-flow: column;
+    width: 400px;
+    border: green 1px solid;
+    text-align: center;
+    padding: 5px;
+    margin: 10px;
+}
+
+input {
+    margin: 10px;
+}
+
+
