@@ -1,7 +1,7 @@
 
 function Car({item, deleteCar}) {
 let clickDelete = () => {
-    return deleteCar(item.idi)
+    return deleteCar(item.id)
 }
     return(
         <div className={'carBox'}>

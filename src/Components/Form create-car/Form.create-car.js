@@ -9,6 +9,7 @@ function CreateCar() {
         console.log(e.target.model.value)
         console.log(e.target.price.value)
         e.preventDefault()
+        // saveCar(formState).then(value => setCheckCar(value))
     }
 
     function onFormChange(e)  {
@@ -16,7 +17,6 @@ function CreateCar() {
     }
     const clickSaveCar = () => {
         saveCar(formState).then(value => setCheckCar(value))
-
     }
 
     return(
