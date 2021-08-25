@@ -7,7 +7,7 @@ function Cars(checkCar) {
     useEffect( ()=>{
         async function fetchData() {
             let carsList = await getCars()
-            setCars([...carsList])
+            setCars([...carsList.reverse()])
         }
         fetchData();
     },[checkCar])

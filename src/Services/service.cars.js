@@ -17,8 +17,10 @@ const saveCar = ({model, price, year}) => {
   }).then(value => value.json())
 }
 
-const editCar = ({id, model, price, year}) => {
-  return  fetch('http://91.201.233.14/api/v1/cars/'+ id, {
+const editCar = (obj) => {
+    let {id, model, price, year} = obj;
+    console.log(obj);
+    return  fetch('http://91.201.233.14/api/v1/cars/'+ id, {
         method: 'PUT',
         body: JSON.stringify({id, model, price, year}),
         headers: {

@@ -9,7 +9,6 @@ import {Home} from "./Components/Home/Home";
 import {Cars} from "./Components/Cars/Cars";
 import {CreateCar} from "./Components/Form create-car/Form.create-car";
 import {EditCarForm} from "./Components/Forms edit-car/Form.edit-car";
-import {FlavorForm} from "./Components/Tests";
 
 function App() {
   return (
@@ -31,10 +30,9 @@ function App() {
         </div>
       </div>
       <div>
-          <Route path={'/'} component={FlavorForm}/>
+          <Route path={'/'} component={Home}/>
           <Route path={'/cars'} component={Cars}/>
           <Route path={'/create-car'} component={CreateCar}/>
-
           <Route path={'/update-car'} component={EditCarForm}/>
       </div>
   </Router>
