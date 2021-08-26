@@ -11,20 +11,20 @@ export function SuperCounter() {
              <div>
                  <h2>Counter A</h2>
                  <p><h3>{a}</h3></p>
-                <button onClick={()=>dispatch({key: 'a', count: 10, act: '+'})}>Click Up</button>
-                <button onClick={()=>dispatch({key: 'a', count: 10, act: '-'})}>Click Down</button>
+                <button onClick={()=>dispatch({key: 'a', count: 10, act: 'Plus'})}>Click Up</button>
+                <button onClick={()=>dispatch({key: 'a', count: 10, act: 'Minus'})}>Click Down</button>
             </div>
             <div>
                 <h2>Counter B</h2>
                 <p><h3>{b}</h3></p>
-                <button onClick={()=>dispatch({key: 'b', count: 100, act: '+'})}>Click Up</button>
-                <button onClick={()=>dispatch({key: 'b', count: 100, act: '-'})}>Click Down</button>
+                <button onClick={()=>dispatch({key: 'b', count: 100, act: 'Plus'})}>Click Up</button>
+                <button onClick={()=>dispatch({key: 'b', count: 100, act: 'Minus'})}>Click Down</button>
             </div>
             <div>
                 <h2>Counter C</h2>
                 <p><h3>{c}</h3></p>
-                <button onClick={()=>dispatch({key: 'c', count: 1000, act: '+'})}>Click Up</button>
-                <button onClick={()=>dispatch({key: 'c', count: 1000, act: '-'})}>Click Down</button>
+                <button onClick={()=>dispatch({key: 'c', count: 1000, act: 'Plus'})}>Click Up</button>
+                <button onClick={()=>dispatch({key: 'c', count: 1000, act: 'Minus'})}>Click Down</button>
             </div>
         </div>
     )

@@ -7,6 +7,29 @@
   pointer-events: none;
 }
 
+.main {
+  display: flex;
+  justify-content: space-around;
+}
+
+button {
+  margin: 5px;
+  color: white;
+  background: green;
+}
+
+.counterSimple {
+  border: green 2px solid;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.counterSuper {
+  border: green 2px solid;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
