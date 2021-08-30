@@ -3,7 +3,7 @@ import {useSelector} from "react-redux";
 import {useDispatch} from "react-redux";
 import {fetchUsers, saveUsers} from "../../services/users.service";
 import {User} from "../User/User";
-import {ADD_USER, CLEAR_USERS} from "../../redux/actions/actionTypes";
+import {CHANGE_INPUT_VALUE, CLEAR_USERS} from "../../redux/actions/actionTypes";
 import {getUsers, setUsers} from "../../redux/actions/actions";
 import './users.css'
 function Users() {
@@ -32,9 +32,8 @@ const state =  useSelector((state)=> state)
         })
     }
 
-    const changeFormState = (e) => {
-        let user = {[e.target.name]: e.target.value}
-      dispatch({type: ADD_USER, payload: user})
+    const changeFormState = () => {
+      dispatch({type: CHANGE_INPUT_VALUE})
     }
 
 
