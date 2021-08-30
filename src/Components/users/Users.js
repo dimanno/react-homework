@@ -25,6 +25,11 @@ const state =  useSelector((state)=> state)
 
     const onSabmit = (e) => {
       e.preventDefault()
+        let user = {[e.target.name]: e.target.name.value}
+        saveUsers(user).then(value => {
+            console.log(value)
+            dispatch({type: 'SAT_USERS', payload: value})
+        })
     }
 
     const changeFormState = (e) => {
@@ -32,12 +37,13 @@ const state =  useSelector((state)=> state)
       dispatch({type: 'ADD_USER', payload: user})
     }
 
-    const clickAddUser = () => {
-        saveUsers().then(value => {
-            console.log(value)
-            dispatch({type: 'SAT_USERS', payload: value})
-        })
-    }
+    // const clickAddUser = (e) => {
+    //     let user = {[e.target.name]: e.target.name.value}
+    //     saveUsers(user).then(value => {
+    //         console.log(value)
+    //         dispatch({type: 'SAT_USERS', payload: value})
+    //     })
+    // }
 
     return (
         <div className="usersBax">
@@ -47,7 +53,7 @@ const state =  useSelector((state)=> state)
              <form onSubmit={onSabmit}>
                 <input type="text" name="name" placeholder='name' onChange={changeFormState}/>
                  <input type='text' name='username' placeholder='username' onChange={changeFormState}/>
-                 <button onClick={clickAddUser}>Add User</button>
+                 <button>Add User</button>
              </form>
 
 
