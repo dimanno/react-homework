@@ -1,5 +1,5 @@
 const url = 'https://jsonplaceholder.typicode.com'
-const getUsers = () => {
+const fetchUsers = () => {
 return     fetch(url + '/users')
         .then(value => value.json())
  }
@@ -15,4 +15,4 @@ return     fetch(url + '/users')
        .then((response) => response.json())
  }
 
- export {getUsers, saveUsers}
+ export {fetchUsers, saveUsers}

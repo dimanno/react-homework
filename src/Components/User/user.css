@@ -1,0 +1,6 @@
+li:nth-of-type(odd) {
+    background: silver;
+}
+ul {
+    width: 400px;
+}

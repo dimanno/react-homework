@@ -1,0 +1,23 @@
+.buttonBox {
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    margin: 10px;
+    padding: 5px;
+    background: green;
+    color: white;
+    border-radius: 20px;
+}
+
+.formBox {
+    display: flex;
+    justify-content: center;
+}
+
+input {
+    border: green 1px solid;
+    margin: 10px;
+    padding: 5px;
+}
