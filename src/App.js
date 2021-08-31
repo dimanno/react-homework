@@ -13,10 +13,10 @@ function App() {
       <Router>
           <div className="main">
                 <Link to={'/'}>
-                    <h3>Home</h3>Home
+                    <h3>Home</h3>
                 </Link>
                 <Link to={'/users'}>
-                    <h3>Users</h3>Home
+                    <h3>Users</h3>
                 </Link>
           </div>
 
