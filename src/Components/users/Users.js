@@ -3,13 +3,14 @@ import {useSelector} from "react-redux";
 import {useDispatch} from "react-redux";
 import {fetchUsers, saveUsers} from "../../services/users.service";
 import {User} from "../User/User";
-import {CHANGE_INPUT_VALUE, CLEAR_USERS} from "../../redux/actions/actionTypes";
+import {ADD_USER, CHANGE_INPUT_VALUE, CLEAR_USERS} from "../../redux/actions/actionTypes";
 import {getUsers, setUsers} from "../../redux/actions/actions";
 import './users.css'
 function Users() {
 const state =  useSelector((state)=> state)
     const dispatch = useDispatch()
     let {users} = state;
+
     useEffect( ()=>{
         fetchUsers().then(value => dispatch(getUsers(value)))
     },[])
@@ -28,7 +29,7 @@ const state =  useSelector((state)=> state)
         let user = {[e.target.name]: e.target.name.value}
         saveUsers(user).then(value => {
             console.log(value)
-            dispatch(setUsers(value))
+            dispatch({type: ADD_USER, payload: value})
         })
     }
 
@@ -46,8 +47,8 @@ const state =  useSelector((state)=> state)
             <hr/>
             <div className={'formBox'}>
              <form onSubmit={onSabmit}>
-                <input type="text" name="name" placeholder='name' onChange={changeFormState}/>
-                 <input type='text' name='username' placeholder='username' onChange={changeFormState}/>
+                <input type="text" name="name" value={state.name} placeholder='name' onChange={changeFormState}/>
+                 <input type='text' name='username' value={state.username} placeholder='username' onChange={changeFormState}/>
                  <button>Add User</button>
              </form>
             </div>

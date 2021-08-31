@@ -4,10 +4,10 @@ return     fetch(url + '/users')
         .then(value => value.json())
  }
 
- const saveUsers = (user) => {
+ const saveUsers = ({name, username}) => {
  return   fetch(url + '/users', {
        method: "POST",
-       body: JSON.stringify(user),
+       body: JSON.stringify({name, username}),
        headers: {
            'Content-type': 'application/json; charset=UTF-8',
        },

@@ -12,8 +12,9 @@ export const userReducer = (state = initialState, action) => {
         case SET_USERS:
             return {...state}
         case ADD_USER:
-            // console.log(action.payload)
-            return {...state, users:[...state.users, action.payload]}
+            let newUser = action.payload
+            let newUsersArray = [...state.users, newUser]
+            return {...state, users: {newUsersArray}}
         case CHANGE_INPUT_VALUE:
             return {...state}
 
