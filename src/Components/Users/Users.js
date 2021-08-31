@@ -3,7 +3,7 @@ import {useSelector} from "react-redux";
 import {useDispatch} from "react-redux";
 import {useEffect, useState} from "react";
 import {addUser, getUsers} from "../../Services/service.user";
-import {addUserAction, loadUsers} from "../../Redux/actions/action.creator";
+import {loadUsers} from "../../Redux/actions/action.creator";
 import {User} from "../User/User";
 export function Users () {
     let state = useSelector(state=> state);
