@@ -1,25 +1,31 @@
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css'
 import {MoviesList} from "./Components/MoviesList/MoviesList";
-import {BrowserRouter as Router,
-    Switch,
-    Route,
-    Link,
-} from "react-router-dom";
-import {getMovies} from "./Services/service.movie";
+import {Header} from "./Components/Header/Header";
+import {GenreBadge} from "./Components/GenreBadge/GenreBadge";
+
 
 function App() {
 
   return (
-      <Router>
-            <div className="main">
-                <Link to={'/'}>Movies Page</Link>
+          <div className={'mainBox'}>
+              <div className={'header-top'}>
+                  <Header/>
+              </div>
+              <div className={'content'}>
+                  <GenreBadge/>
+                  <div className={'container-fluid movie-app'}>
+                      <div className='row'>
 
-                <MoviesList/>
-            </div>
-          <div>
-              <Route path={'/'} component={MoviesList}/>
+                          <MoviesList/>
+
+                      </div>
+                  </div>
+
+              </div>
+
           </div>
-      </Router>
+
   );
 }
 
