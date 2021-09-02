@@ -12,7 +12,7 @@ export function GenreBadge() {
     return (
         <div className={'genreBadgeBox'}>
             {
-                state.map(value=> <ul>
+                state.map(value=> <ul key={value.id}>
                     <li>{value.name}</li>
                 </ul>)
             }

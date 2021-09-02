@@ -1,9 +1,7 @@
-body{
-  background: #220155;
-}
 
-.App {
-  text-align: center;
+
+.mainBox {
+  background: #220155;
 }
 
 .App-logo {
@@ -17,10 +15,13 @@ body{
 }
 
 .content {
+  padding: 10px;
+  margin: 10px;
   display: flex;
 }
-.movie-card {
-  width: 240px;
+
+.header-top {
+  padding: 1rem;
 }
 
 

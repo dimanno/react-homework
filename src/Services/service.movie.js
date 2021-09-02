@@ -1,5 +1,5 @@
 import axios from "axios"
-import {loadMovies} from "../Redux/Actions/action.creator";
+import {loadMovies, searchMovie} from "../Redux/Actions/action.creator";
 import {loadGenres} from "../Redux/Actions/action.creator";
 
 let config = {
@@ -21,6 +21,5 @@ const getGenres = () => async (dispatch) => {
     console.log(response.data.genres);
     dispatch(loadGenres(response.data.genres))
 }
-
 
 export {getMovies, getGenres}

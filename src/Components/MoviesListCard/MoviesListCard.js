@@ -6,15 +6,6 @@ import {
 export function MoviesListCard({title, poster_path}) {
     return (
         <div className={'movie-card'}>
-            {/*<div>*/}
-            {/*    <img src={images_API+poster_path} alt="Card poster-movie/>"/>*/}
-            {/*</div>*/}
-            {/*<div className={'cardBody'}>*/}
-            {/*    <h3>{title}</h3>*/}
-            {/*</div>*/}
-            {/*<div>*/}
-            {/*    */}
-            {/*</div>*/}
             <Card>
                 <CardImg src={images_API+poster_path} alt="Card poster-movie" />
                 <CardBody>

@@ -13,13 +13,11 @@ export function MoviesList() {
     useEffect(() => {dispatch(getMovies())},[])
     console.log(state);
     return (
-        <div className={'movieslistBox'}>
-            <div className={'wrapList'}>
+
+        <div className={'d-flex justify-content-lg-start m-3'}>
                 {
                     state.map(value => <MoviesListCard {...value} key={value.id}/>)
                 }
-            </div>
-
         </div>
     );
 }

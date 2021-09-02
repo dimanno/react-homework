@@ -17,8 +17,8 @@ function App() {
                       <GenreBadge/>
                   </div>
 
-                  <div className={'movie-app'}>
-                      <div>
+                  <div className={'movie-app container-fluid'}>
+                      <div className={'row wrap'}>
                           <MoviesList/>
                       </div>
                   </div>
