@@ -1,21 +1,21 @@
-import {Header} from "../Header/Header";
-import {MoviesList} from "../MoviesList/MoviesList";
+import './genres.css'
 import {useEffect} from "react";
 import {useDispatch, useSelector} from "react-redux";
 import {getGenres} from "../../Services/service.movie";
 
 export function GenreBadge() {
-    let store = useSelector(({genres}) => genres);
+    let state = useSelector(({genres}) => genres);
     let dispatch = useDispatch()
 
     useEffect(() => {dispatch(getGenres())},[])
-    // console.log(store);
+    console.log(state);
     return (
         <div className={'genreBadgeBox'}>
-            <ul>
-                <li> </li>
-            </ul>
+            {
+                state.map(value=> <ul>
+                    <li>{value.name}</li>
+                </ul>)
+            }
         </div>
-
     );
 }

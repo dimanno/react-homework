@@ -13,12 +13,13 @@ function App() {
                   <Header/>
               </div>
               <div className={'content'}>
-                  <GenreBadge/>
-                  <div className={'container-fluid movie-app'}>
-                      <div className='row'>
+                  <div className={'wramGenres'} >
+                      <GenreBadge/>
+                  </div>
 
+                  <div className={'movie-app'}>
+                      <div>
                           <MoviesList/>
-
                       </div>
                   </div>
 

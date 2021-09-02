@@ -7,16 +7,16 @@ import {useDispatch} from "react-redux";
 import {MoviesListCard} from "../MoviesListCard/MoviesListCard";
 
 export function MoviesList() {
-    let store = useSelector(({movies}) => movies);
+    let state = useSelector(({movies}) => movies);
     let dispatch = useDispatch()
 
     useEffect(() => {dispatch(getMovies())},[])
-    console.log(store);
+    console.log(state);
     return (
         <div className={'movieslistBox'}>
-            <div className={'d-flex justify-content-start m-3'}>
+            <div className={'wrapList'}>
                 {
-                    store.map(value => <MoviesListCard {...value} key={value.id}/>)
+                    state.map(value => <MoviesListCard {...value} key={value.id}/>)
                 }
             </div>
 

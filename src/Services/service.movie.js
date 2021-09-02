@@ -18,8 +18,8 @@ const getMovies = () => async (dispatch) => {
 
 const getGenres = () => async (dispatch) => {
     let response = await axiosInstant.get('/genre/movie/list');
-    console.log(response.data);
-    dispatch(loadGenres(response.data))
+    console.log(response.data.genres);
+    dispatch(loadGenres(response.data.genres))
 }
 
 
