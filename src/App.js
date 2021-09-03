@@ -3,15 +3,18 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import {MoviesList} from "./Components/MoviesList/MoviesList";
 import {Header} from "./Components/Header/Header";
 import {GenreBadge} from "./Components/GenreBadge/GenreBadge";
-
+import {BrowserRouter as Router, Link, Route} from "react-router-dom";
+import {MovieInfo} from "./Components/MovieInfo/MovieInfo";
 
 function App() {
 
   return (
+      <Router>
           <div className={'mainBox'}>
               <div className={'header-top'}>
                   <Header/>
               </div>
+
               <div className={'content'}>
                   <div className={'wramGenres'} >
                       <GenreBadge/>
@@ -22,11 +25,13 @@ function App() {
                           <MoviesList/>
                       </div>
                   </div>
-
               </div>
-
+              <div>
+                  <Route path={'/:id'} render={(props) =>
+                  {return props: <MovieInfo histoty={history}/>}}/>
+              </div>
           </div>
-
+      </Router>
   );
 }
 

@@ -1,5 +1,5 @@
 import axios from "axios"
-import {loadMovies, searchMovie} from "../Redux/Actions/action.creator";
+import {loadMovies} from "../Redux/Actions/action.creator";
 import {loadGenres} from "../Redux/Actions/action.creator";
 
 let config = {
@@ -11,8 +11,8 @@ let config = {
 let axiosInstant = axios.create(config);
 
 const getMovies = () => async (dispatch) => {
-   let response = await axiosInstant.get('/discover/movie');
-    // console.log(response.data.results);
+   let response = await axiosInstant.get('/discover/movie/');
+    console.log(response.data.results);
     dispatch(loadMovies(response.data.results))
 }
 

@@ -30,7 +30,6 @@ import {useDispatch} from "react-redux";
      }
 
   return (
-      <Router>
           <div className={'wrap-header'}>
             <div className={"header"}>
               {/*<Link to={'/'}>All films</Link>*/}
@@ -46,6 +45,5 @@ import {useDispatch} from "react-redux";
                 </form>
             </div>
           </div>
-      </Router>
   )
 }
