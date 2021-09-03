@@ -13,6 +13,7 @@ function App() {
           <div className={'mainBox'}>
               <div className={'header-top'}>
                   <Header/>
+                  <Link to={'/'}>Home</Link>
               </div>
 
               <div className={'content'}>
@@ -27,8 +28,7 @@ function App() {
                   </div>
               </div>
               <div>
-                  <Route path={'/:id'} render={(props) =>
-                  {return props: <MovieInfo histoty={history}/>}}/>
+                  <Route path={'/'}/>
               </div>
           </div>
       </Router>

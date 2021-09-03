@@ -2,6 +2,7 @@ import './genres.css'
 import {useEffect} from "react";
 import {useDispatch, useSelector} from "react-redux";
 import {getGenres} from "../../Services/service.movie";
+import {BrowserRouter as Router, Link, Route} from "react-router-dom";
 
 export function GenreBadge() {
     let state = useSelector(({genres}) => genres);
@@ -13,7 +14,9 @@ export function GenreBadge() {
         <div className={'genreBadgeBox'}>
             {
                 state.map(value=> <ul key={value.id}>
-                    <li>{value.name}</li>
+                    <li>
+                        <Link to={`/${value.id}`}>{value.name}</Link>
+                    </li>
                 </ul>)
             }
         </div>

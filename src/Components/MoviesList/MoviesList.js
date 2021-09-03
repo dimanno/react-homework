@@ -16,11 +16,13 @@ export function MoviesList() {
     console.log(state);
     return (
             <div>
-                <div className={'d-flex justify-content-lg-start m-3'}>
+                <div className={'d-flex justify-content-start m-3'}>
                     {
                         state.map(value => <MoviesListCard {...value} key={value.id}/>)
                     }
                 </div>
+                <Route path={'/:id'} render={(props) =>
+                {return <MovieInfo {...props}/>}}/>
             </div>
 
     );

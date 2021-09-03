@@ -1,6 +1,5 @@
 import axios from "axios"
-import {loadMovies} from "../Redux/Actions/action.creator";
-import {loadGenres} from "../Redux/Actions/action.creator";
+import {loadGenres, loadMovie, loadMovies, loadGenre} from "../Redux/Actions/action.creator";
 
 let config = {
     baseURL: 'https://api.themoviedb.org/3/',
@@ -16,10 +15,24 @@ const getMovies = () => async (dispatch) => {
     dispatch(loadMovies(response.data.results))
 }
 
+const getMovie = (id) => async (dispatch) => {
+    let response = await axiosInstant.get(`/discover/movie/${id})`);
+    console.log(response);
+    dispatch(loadMovie(response))
+}
+
 const getGenres = () => async (dispatch) => {
     let response = await axiosInstant.get('/genre/movie/list');
     console.log(response.data.genres);
     dispatch(loadGenres(response.data.genres))
 }
 
-export {getMovies, getGenres}
+const getMoviesByGenre = (id) => async (dispatch) => {
+    let response = await axiosInstant.get(`/discover/movie/?with_genres=${id}`);
+    console.log(response);
+    dispatch(loadGenre(response))
+}
+
+
+
+export {getMovies, getGenres, getMovie, getMoviesByGenre}
