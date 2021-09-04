@@ -15,7 +15,7 @@ export function GenreBadge() {
             {
                 state.map(value=> <ul key={value.id}>
                     <li>
-                        <Link to={`/${value.id}`}>{value.name}</Link>
+                        <Link to={{pathname:`/${value.id}`, value}}>{value.name}</Link>
                     </li>
                 </ul>)
             }

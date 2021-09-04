@@ -31,9 +31,6 @@ import {useDispatch} from "react-redux";
 
   return (
           <div className={'wrap-header'}>
-            <div className={"header"}>
-              {/*<Link to={'/'}>All films</Link>*/}
-            </div>
             <div className={'search-box'}>
                 <form onSubmit={onsubmit}>
                     <input className={'search'}

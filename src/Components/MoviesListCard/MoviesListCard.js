@@ -1,4 +1,5 @@
 import {images_API} from "../../images/images";
+import './movieListCard.css'
 import {
     BrowserRouter as Router,
     Switch,
@@ -24,7 +25,7 @@ export function MoviesListCard({poster_path, id, title, genre_ids,original_langu
                 <CardImg src={images_API+poster_path} alt="Card poster-movie" />
                 <CardBody>
                     <CardTitle tag="h6">{title}</CardTitle>
-                        <Link to={{pathname: `/${id}`}}>Details</Link>
+                        <Link to={{pathname: `/y/${id}`, movie}}>Details</Link>
                     <Button onClick={detailsMovie}>Details</Button>
                 </CardBody>
             </Card>

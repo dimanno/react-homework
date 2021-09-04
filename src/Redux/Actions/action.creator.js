@@ -1,4 +1,5 @@
 import {GET_GENRES, LOAD_MOVIES, GET_MOVIE, GET_GENRE} from "./action.type";
+import {getMoviesByGenre} from "../../Services/service.movie";
 
 
 const loadMovies = (payload) => {
@@ -13,9 +14,9 @@ const loadGenres = (payload) => {
   return {type: GET_GENRES, payload: payload}
 }
 
-const loadGenre = (payload) => {
+const loadMoviesByGenre = (payload) => {
   return {type: GET_GENRE, payload: payload}
 }
 
 
-export {loadMovies, loadGenres, loadMovie, loadGenre}
+export {loadMovies, loadGenres, loadMovie, loadMoviesByGenre}

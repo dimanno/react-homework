@@ -4,6 +4,7 @@ import {useParams} from "react-router";
 import {useEffect} from "react";
 import {getMovie} from "../../Services/service.movie";
 import {useDispatch, useSelector} from "react-redux";
+import data from "bootstrap/js/src/dom/data";
 
 export function MovieInfo({match:{params:{id}}}) {
     console.log(id)
@@ -15,14 +16,17 @@ export function MovieInfo({match:{params:{id}}}) {
             dispatch(getMovie(id))
     },[id])
     return (
-        <div className={'MovieInfoBox'}>
-            <h2>{}</h2>
-            <div>
-                {images_API}
+        <div className={' d-flex MovieInfoBox'}>
+            <div className={'poster'}>
+               <img width={'300px'} src={images_API+state.poster_path} alt={'posterCard'}/>
             </div>
-            <p>
-                {JSON.stringify(state)}
-            </p>
+            <div>
+                <h2>{state.title}</h2>
+                <p>
+                    {state.overview}
+                </p>
+            </div>
+
         </div>
     )
 }
