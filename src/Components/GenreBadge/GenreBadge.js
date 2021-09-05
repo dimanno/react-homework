@@ -13,11 +13,12 @@ export function GenreBadge() {
     return (
         <div className={'genreBadgeBox'}>
             {
-                state.map(value=> <ul key={value.id}>
+                state.map(value=> <ul>
                     <li>
-                        <Link to={{pathname:`/${value.id}`, value}}>{value.name}</Link>
+                        <Link to={{pathname: `/${value.id}`}}>{value.name}</Link>
                     </li>
-                </ul>)
+                </ul>
+                    )
             }
         </div>
     );

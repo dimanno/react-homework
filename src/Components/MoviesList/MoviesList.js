@@ -14,13 +14,21 @@ export function MoviesList() {
 
     useEffect(() => {dispatch(getMovies())},[])
     console.log(state);
+
+    const load_more = () => {
+
+    }
     return (
         <div>
-            <div className={'d-flex'}>
+            <div className={'d-flex movieListBox'}>
                     {
                         state.map(value => <MoviesListCard {...value} key={value.id}/>)
                     }
             </div>
+            <div className={'buttonBox'}>
+                <button onClick={load_more} className={'buttonBox'}>Load more</button>
+            </div>
+
         </div>
 
     );

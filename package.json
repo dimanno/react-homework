@@ -20,7 +20,9 @@
     "bootstrap": "^5.1.0",
     "bootstrap-vue": "^2.21.2",
     "reactstrap": "^8.9.0",
-    "reactstrap-pager": "^1.0.1"
+    "reactstrap-pager": "^1.0.1",
+    "styled-components": "^5.3.1",
+    "react-icons": "^4.2.0"
   },
   "devDependencies": {
     "@types/react": "^17.0.16",

@@ -1,5 +1,9 @@
 
-/*.wrapList {*/
-/*    display: flex;*/
-/*    flex-wrap: wrap;*/
-/*}*/
+.movieListBox {
+    display: inline-table;
+}
+
+.buttonBox {
+    position: absolute;
+    width: 300px;
+}

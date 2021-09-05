@@ -3,3 +3,9 @@
     margin: 20px;
     background: rgba(255, 255, 255, 0.5);
 }
+
+.genreBadgeBox li {
+    list-style: none;
+    line-height: initial;
+}
+

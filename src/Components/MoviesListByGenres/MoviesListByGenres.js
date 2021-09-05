@@ -16,6 +16,7 @@ export function MoviesListByGenres ({match:{params:{id}}}) {
                      state.map(value => <MoviesListCard {...value} key={value.id}/>)
                  }
              </div>
+             <button className={'buttonBox'}>Load more</button>
          </div>
     )
 }

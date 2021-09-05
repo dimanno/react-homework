@@ -1,46 +1,42 @@
 import './Header.css'
-import {BrowserRouter as Router,
-    Switch,
-    Route,
-    Link,
-} from "react-router-dom";
-import {MoviesList} from "../MoviesList/MoviesList";
-import {useState} from "react";
-import {useDispatch} from "react-redux";
+import 'bootstrap/dist/css/bootstrap.min.css'
+import {Search} from "../Search/Search";
+import {HiMoon} from "react-icons/hi";
+import {CgSun} from "react-icons/cg";
+import styled from "styled-components";
+import {Link} from "react-router-dom";
 
- export const Header = () => {
-     let [searchItem, setSearchItem] = useState('')
-     let dispatch = useDispatch()
-     let searchMovie = 'https://api.themoviedb.org/3/search/movie'
+const Toggle = styled.button`
+  cursor: pointer;    
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border:none;
+  background-color: ${props => props.theme.titleColor};
+  color: ${props => props.theme.pageBackground}
+  transition: all .5s ease;
+`
 
+ export function Header(props) {
 
-     const onsubmit = (e) => {
-       e.preventDefault()
-         if (setSearchItem) {
-            fetch(searchMovie+searchItem)
-                .then(value => value.json())
-                .then(value => {
-                    dispatch(value.results)
-                });
-            setSearchItem('')
+     function changeTheme() {
+         if (props.theme === "light") {
+             props.setTheme('dark');
+         } else {
+             props.setTheme("light");
          }
      }
-     const handleChange = (e) => {
-       setSearchItem(e.target.value)
-     }
 
+     const icon = props.theme === 'light' ? <HiMoon size={40}/> : <CgSun size={40}/>
   return (
           <div className={'wrap-header'}>
-            <div className={'search-box'}>
-                <form onSubmit={onsubmit}>
-                    <input className={'search'}
-                           type="text"
-                           value={searchItem}
-                           placeholder="search"
-                           onChange={handleChange}
-                    />
-                </form>
-            </div>
+              <div className={'home'}>
+                  <Link to={'/'}><h3>Movie App</h3></Link>
+              </div>
+              <Search/>
+              <Toggle onClick={changeTheme} >
+                  {icon}
+              </Toggle>
           </div>
   )
 }

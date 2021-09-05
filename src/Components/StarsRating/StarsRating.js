@@ -1,36 +1,19 @@
 import StarRatings from './react-star-ratings';
 
-class Foo extends Component {
-    changeRating( newRating, name ) {
-        this.setState({
-            rating: newRating
-        });
-    }
+export function StarsRating() {
 
-    render() {
-        // rating = 2;
-        return (
-            <StarRatings
-                rating={this.state.rating}
-                starRatedColor="blue"
-                changeRating={this.changeRating}
-                numberOfStars={6}
-                name='rating'
-            />
-        );
-    }
+    return (
+         <div>
+           <StarRatings
+               count={5}
+                size={20}
+               value={rating}
+               activColor={'green'}
+               inactivColor={'#ddd'}
+               onChange={handleChange}
+           />
+         </div>
+    )
 }
 
 
-class Bar extends Component {
-    render() {
-        // aggregateRating = 2.35;
-        return (
-            <StarRatings
-                rating={2.403}
-                starDimension="40px"
-                starSpacing="15px"
-            />
-        );
-    }
-}
