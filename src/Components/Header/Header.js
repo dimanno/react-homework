@@ -6,6 +6,8 @@ import {CgSun} from "react-icons/cg";
 import styled from "styled-components";
 import {Link} from "react-router-dom";
 
+
+
 const Toggle = styled.button`
   cursor: pointer;    
   height: 50px;

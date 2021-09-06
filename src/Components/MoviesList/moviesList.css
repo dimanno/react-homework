@@ -5,5 +5,10 @@
 
 .buttonBox {
     position: absolute;
-    width: 300px;
+    ;
+}
+.buttonNextPage {
+    width: 200px;
+    padding: 5px;
+    border-radius: 20px;
 }

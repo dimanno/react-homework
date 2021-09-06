@@ -1,6 +1,6 @@
 import './moviesList.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import {useEffect} from "react";
+import {useEffect, useState} from "react";
 import {getMovies} from "../../Services/service.movie";
 import {useSelector} from "react-redux";
 import {useDispatch} from "react-redux";
@@ -11,12 +11,13 @@ import {MovieInfo} from "../MovieInfo/MovieInfo";
 export function MoviesList() {
     let state = useSelector(({movies}) => movies);
     let dispatch = useDispatch()
-
-    useEffect(() => {dispatch(getMovies())},[])
+    let [page, setPage] = useState(1)
+    useEffect(() => {dispatch(getMovies(page))},[page])
     console.log(state);
 
-    const load_more = () => {
 
+    const load_more = () => {
+        setPage(page+1)
     }
     return (
         <div>
@@ -26,7 +27,7 @@ export function MoviesList() {
                     }
             </div>
             <div className={'buttonBox'}>
-                <button onClick={load_more} className={'buttonBox'}>Load more</button>
+                <button onClick={load_more} className={'buttonNextPage'}>Next Page</button>
             </div>
 
         </div>

@@ -16,7 +16,8 @@ export class Foo extends Component {
                 rating={5}
                 starRatedColor="blue"
                 changeRating={this.changeRating}
-                numberOfStars={6}
+                numberOfStars={5}
+                size={40}
                 name='rating'
             />
         );

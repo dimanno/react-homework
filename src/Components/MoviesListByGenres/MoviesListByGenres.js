@@ -1,14 +1,19 @@
 import {useDispatch, useSelector} from "react-redux";
-import {useEffect} from "react";
-import {getMovies, getMoviesByGenre} from "../../Services/service.movie";
+import {useEffect, useState} from "react";
+import {getMoviesByGenre} from "../../Services/service.movie";
 import {MoviesListCard} from "../MoviesListCard/MoviesListCard";
+import './movieListByGenres.css'
 
 export function MoviesListByGenres ({match:{params:{id}}}) {
     let state = useSelector(({moviesByGenres}) => moviesByGenres);
     let dispatch = useDispatch()
+    let [page, setPage] = useState(1)
 
-    useEffect(() => {dispatch(getMoviesByGenre(id))},[id])
-    console.log(state);
+    useEffect(() => {dispatch(getMoviesByGenre(id, page))},[id, page])
+
+    const clickNextPage = () => {
+      setPage(page+1)
+    }
     return (
          <div>
              <div className={'d-flex'}>
@@ -16,7 +21,9 @@ export function MoviesListByGenres ({match:{params:{id}}}) {
                      state.map(value => <MoviesListCard {...value} key={value.id}/>)
                  }
              </div>
-             <button className={'buttonBox'}>Load more</button>
+             <div className={'buttonBox'}>
+                 <button onClick={clickNextPage} className={'buttonNextPage'}>Next page</button>
+             </div>
          </div>
     )
 }

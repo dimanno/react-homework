@@ -2,10 +2,16 @@
     width: 200px;
     margin: 20px;
     background: rgba(255, 255, 255, 0.5);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 15px;
 }
 
 .genreBadgeBox li {
     list-style: none;
     line-height: initial;
+}
+a {
+    text-decoration: none;
 }
 

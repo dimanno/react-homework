@@ -5,5 +5,27 @@
     width: 300px;
     box-sizing: border-box;
 }
+.cardBodyBox{
+    box-sizing: border-box;
+    background: rgba(37, 1, 70, 0.57);
+}
 
+.tag {
+    background: #250146;
+    padding: 0.5rem;
+    color: white;
+    border-radius: 5px;
+    max-height: 41px;
+}
 
+.tag.green {
+ color: green;
+}
+
+.tag.orange {
+    color: orange;
+}
+
+.tag.red {
+    color: red;
+}

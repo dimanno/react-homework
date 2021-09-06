@@ -9,9 +9,9 @@ let config = {
 }
 let axiosInstant = axios.create(config);
 
-const getMovies = () => async (dispatch) => {
-   let response = await axiosInstant.get('/discover/movie/');
-    console.log(response.data.results);
+const getMovies = (page) => async (dispatch) => {
+   let response = await axiosInstant.get('/discover/movie?page='+page);
+    console.log(response.data);
     dispatch(loadMovies(response.data.results))
 }
 
@@ -27,8 +27,8 @@ const getGenres = () => async (dispatch) => {
     dispatch(loadGenres(response.data.genres))
 }
 
-const getMoviesByGenre = (id) => async (dispatch) => {
-    let response = await axiosInstant.get(`/discover/movie?with_genres=${id}`);
+const getMoviesByGenre = (id, page) => async (dispatch) => {
+    let response = await axiosInstant.get(`/discover/movie?with_genres=${id}&page=`+page);
     console.log(response);
     dispatch(loadMoviesByGenre(response.data.results))
 }

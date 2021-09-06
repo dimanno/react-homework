@@ -10,3 +10,8 @@
     padding: 10px;
     margin-right: 20px;
 }
+
+.home h3 {
+    text-decoration: none;
+    color: silver;
+}

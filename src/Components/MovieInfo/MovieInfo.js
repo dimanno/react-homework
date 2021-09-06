@@ -5,6 +5,7 @@ import {useEffect} from "react";
 import {getMovie} from "../../Services/service.movie";
 import {useDispatch, useSelector} from "react-redux";
 import data from "bootstrap/js/src/dom/data";
+import {Foo} from "../StarsRating/StarsRating";
 
 export function MovieInfo({match:{params:{id}}}) {
     console.log(id)
@@ -25,6 +26,8 @@ export function MovieInfo({match:{params:{id}}}) {
                 <p>
                     {state.overview}
                 </p>
+                {state.video}
+                <Foo/>
             </div>
 
         </div>
