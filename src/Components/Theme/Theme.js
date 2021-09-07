@@ -1,7 +1,6 @@
 import styled from "styled-components";
-import {CgSun} from "react-icons/cg";
-import {HiMoon} from "react-icons/hi";
-import {Link, Route, Switch} from "react-router-dom";
+
+import {Route, Switch} from "react-router-dom";
 import {Header} from "../Header/Header";
 import {GenreBadge} from "../GenreBadge/GenreBadge";
 import {MoviesListByGenres} from "../MoviesListByGenres/MoviesListByGenres";
@@ -16,17 +15,6 @@ const Page = styled.div`
   width: 100%;
   background: ${props => props.theme.pageBackground};
   transition: all .5s ease;
-`;
-
-const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-`;
-const Tagline = styled.span`
-   color: ${props => props.theme.tagLineColor};
-   font-size: 18px;
-   transition: all .5s ease;
 `;
 
 export function Theme(props) {
@@ -54,7 +42,7 @@ const setTheme = props.setTheme
                      </div>
                      <div>
                          <Switch>
-                             <Route path={'/movie-info/:id'} render={(props) =>
+                             <Route path={'/movie-info:id'} render={(props) =>
                              {return <MovieInfo {...props}/>}}/>
                          </Switch>
                      </div>

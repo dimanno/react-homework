@@ -19,7 +19,7 @@ export const Search = () => {
         if (searchItem) {
                 fetch(searchMovie+searchItem)
                     .then(value => value.json())
-                    .then((value) => {dispatch(value.results)
+                    .then((value) => {setSearchItem(value.results)
                     })
             setSearchItem('')
         }

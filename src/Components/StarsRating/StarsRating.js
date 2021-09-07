@@ -3,37 +3,23 @@ import React, { Component } from 'react';
 
 
 export class Foo extends Component {
-    changeRating( newRating, name ) {
-        this.setState({
-            rating: newRating
-        });
-    }
+    // changeRating( newRating, name) {
+    //     this.setState({
+    //         rating: newRating
+    //   });
+    // }
 
     render() {
-        // rating = 2;
         return (
             <StarRatings
-                rating={5}
+                rating={this.props.vote_average/2}
                 starRatedColor="blue"
                 changeRating={this.changeRating}
                 numberOfStars={5}
-                size={40}
+                size={20}
                 name='rating'
             />
         );
     }
 }
 
-
-// class Bar extends Component {
-//     render() {
-//         // aggregateRating = 2.35;
-//         return (
-//             <StarRatings
-//                 rating={2.403}
-//                 starDimension="40px"
-//                 starSpacing="15px"
-//             />
-//         );
-//     }
-// }

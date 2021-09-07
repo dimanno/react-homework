@@ -1,29 +1,24 @@
 import {images_API} from "../../images/images";
 import './movieListCard.css'
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-    Link, useHistory,
-} from "react-router-dom";
+import {useHistory,} from "react-router-dom";
 import {
     Card, CardImg, CardBody,
     CardTitle,
 } from 'reactstrap';
-import {Foo} from "../StarsRating/StarsRating";
 
-export function MoviesListCard({poster_path, id, title, genre_ids,overview,video,vote_average}) {
+export function MoviesListCard({poster_path, id, title, overview, vote_average}) {
     console.log()
     let history = useHistory()
+
     const detailsMovie = () => {
         history.push(
-            `/movie-info/${id}`
+            `/movie-info${id}`
         )
     }
     const setVoteClass = (vote) => {
         if(vote >= 8) {
             return "green"
-        }else if (vote >=5) {
+        }else if (vote >=6) {
             return "orange"
         } else {
             return 'red'
