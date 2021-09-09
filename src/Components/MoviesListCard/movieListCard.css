@@ -1,9 +1,11 @@
 
 .movie-card {
-    margin: 5px;
+    margin: 1rem;
     padding: 5px;
     width: 300px;
     box-sizing: border-box;
+    border-radius: 3px;
+    overflow: hidden;
 }
 .cardBodyBox{
     box-sizing: border-box;
@@ -29,3 +31,6 @@
 .tag.red {
     color: red;
 }
+
+
+

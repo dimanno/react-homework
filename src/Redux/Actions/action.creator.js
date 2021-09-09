@@ -1,5 +1,5 @@
 import {GET_GENRES, LOAD_MOVIES, GET_MOVIE, GET_GENRE} from "./action.type";
-import {getMoviesByGenre} from "../../Services/service.movie";
+
 
 
 const loadMovies = (payload) => {

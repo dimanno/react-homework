@@ -1,0 +1,16 @@
+.movie-list-wrap {
+    overflow-x: auto;
+    flex-flow: wrap;
+    margin: 5px 30px;
+}
+
+.movieList {
+    display: inline-flex;
+}
+
+
+.content {
+    box-sizing: border-box;
+    padding: 10px;
+    margin: 10px;
+}

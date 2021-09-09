@@ -1,18 +1,13 @@
 import StarRatings from 'react-star-ratings';
 import React, { Component } from 'react';
+import {useSelector} from "react-redux";
 
 
 export class Foo extends Component {
-    // changeRating( newRating, name) {
-    //     this.setState({
-    //         rating: newRating
-    //   });
-    // }
-
     render() {
         return (
             <StarRatings
-                rating={this.props.vote_average/2}
+                rating={this.props.vote_average && this.props.vote_average/2}
                 starRatedColor="blue"
                 changeRating={this.changeRating}
                 numberOfStars={5}
@@ -22,4 +17,3 @@ export class Foo extends Component {
         );
     }
 }
-

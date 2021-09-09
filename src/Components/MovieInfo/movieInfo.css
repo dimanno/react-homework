@@ -1,6 +1,7 @@
 .MovieInfoBox {
     background: rgba(255, 255, 255, 0.5);
     margin: 20px;
+    border: #250146 1px solid;
 }
 .genresMovieBox {
     display: inline;

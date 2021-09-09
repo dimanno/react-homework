@@ -6,7 +6,7 @@ import {
     CardTitle,
 } from 'reactstrap';
 
-export function MoviesListCard({poster_path, id, title, overview, vote_average}) {
+export function MoviesListCard({poster_path, id, title, vote_average}) {
     console.log()
     let history = useHistory()
 
@@ -26,8 +26,8 @@ export function MoviesListCard({poster_path, id, title, overview, vote_average})
     }
     return (
         <div className={'movie-card'}>
-            <Card onClick={detailsMovie}>
-                <CardImg src={images_API+poster_path} alt="Card poster-movie" />
+            <Card>
+                <CardImg onClick={detailsMovie} src={images_API+poster_path} alt="Card poster-movie" />
                 <CardBody className={'cardBodyBox'}>
                     <div className={'d-flex justify-content-between'}>
                             <CardTitle>{title}</CardTitle>

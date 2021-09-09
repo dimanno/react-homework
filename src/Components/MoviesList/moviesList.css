@@ -4,8 +4,9 @@
 }
 
 .buttonBox {
-    position: absolute;
-    ;
+    display: flex;
+    justify-content: left;
+    position: relative;
 }
 .buttonNextPage {
     width: 200px;

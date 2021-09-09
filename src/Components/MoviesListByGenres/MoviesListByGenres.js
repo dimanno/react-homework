@@ -1,6 +1,6 @@
 import {useDispatch, useSelector} from "react-redux";
 import {useEffect, useState} from "react";
-import {getMoviesByGenre} from "../../Services/service.movie";
+import {getMoviesByGenre} from "../../Services/genres-service";
 import {MoviesListCard} from "../MoviesListCard/MoviesListCard";
 import './movieListByGenres.css'
 

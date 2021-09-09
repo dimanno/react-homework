@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+import './Theme].css'
 import {Route, Switch} from "react-router-dom";
 import {Header} from "../Header/Header";
 import {GenreBadge} from "../GenreBadge/GenreBadge";
@@ -39,13 +39,14 @@ const setTheme = props.setTheme
                                  <MoviesList/>
                              </Switch>
                          </div>
+                         <div>
+                             <Switch>
+                                 <Route path={'/movie-info:id'} render={(props) =>
+                                 {return <MovieInfo {...props}/>}}/>
+                             </Switch>
+                         </div>
                      </div>
-                     <div>
-                         <Switch>
-                             <Route path={'/movie-info:id'} render={(props) =>
-                             {return <MovieInfo {...props}/>}}/>
-                         </Switch>
-                     </div>
+
 
                  </div>
          </Page>

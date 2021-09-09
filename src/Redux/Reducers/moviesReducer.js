@@ -1,7 +1,12 @@
 import {store} from "../Store";
 import {GET_GENRES, LOAD_MOVIES, GET_MOVIE, GET_GENRE} from "../Actions/action.type";
 
-let  initialState = {movies: [], genres:[], movie:{}, moviesByGenres:[]}
+let  initialState = {
+    movies: [],
+    genres:[],
+    movie:{},
+    moviesByGenres:[]
+}
 export const moviesReducer = (state = initialState, action) => {
     switch (action.type) {
         case LOAD_MOVIES:
